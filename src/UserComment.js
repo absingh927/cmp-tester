@@ -54,17 +54,16 @@ const ActionBtn = styled.button`
   background-color: transparent;
   margin: 0 0.25rem;
   border: none;
-  font-seize: 0.75rem;
+  font-size: 0.75rem;
   cursor: pointer;
   color: ${(props) => (props.isHovering ? "#5c5c5c" : "#bababa")};
 
-  $:focus {
+  &:focus {
     outline: none;
   }
 
   span {
-    color: #919191;
-    color: ${(props) => (props.isHovering ? "#5c5c5c" : "#bababa")};
+    color: ${(props) => (props.isHovering ? "#5c5c5c" : "#919191")};
   }
 `;
 
@@ -73,7 +72,8 @@ const Body = styled.div`
   line-height: 1.5rem;
 `;
 
-const UserComment = () => {
+const UserComment = (props) => {
+  console.log("usercome", props);
   const [isHovering, setHovering] = React.useState(false);
 
   return (
@@ -86,15 +86,11 @@ const UserComment = () => {
       </ContainerLeft>
       <ContainerRight>
         <Title>
-          Brad
-          <Pill>Author</Pill>
-          <Duration>&#183; 2 minutes ago</Duration>
+          {props.data.name}
+          <Pill>{props.data.role}</Pill>
+          <Duration>&#183; {props.data.duration} minutes ago</Duration>
         </Title>
-        <Body>
-          So what the German automaker is likely to focus on today is the bigger
-          picture. This will be the first time we see the Taycan free from any
-          prototype bodywork
-        </Body>
+        <Body>{props.data.comment}</Body>
         <Actions>
           <ActionBtn
             isHovering={isHovering}
@@ -103,10 +99,15 @@ const UserComment = () => {
             REPLY
           </ActionBtn>
           <ActionBtn isHovering={isHovering}>
-            <span>21</span>&nbsp;REPLIES
+            <span>{props.data.replies}</span>&nbsp;REPLIES
           </ActionBtn>
-          <ActionBtn isHovering={isHovering}>123</ActionBtn>
-          <ActionBtn isHovering={isHovering}>0</ActionBtn>
+          <ActionBtn isHovering={isHovering}>
+            <i className="fas fa-chevron-up"></i>&nbsp;{props.data.upVote}
+          </ActionBtn>
+          <ActionBtn isHovering={isHovering}>
+            <i className="fas fa-chevron-down"></i>
+            &nbsp;{props.data.downVote}
+          </ActionBtn>
         </Actions>
       </ContainerRight>
     </Container>
