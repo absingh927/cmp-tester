@@ -52,11 +52,11 @@ const Actions = styled.div`
 
 const ActionBtn = styled.button`
   background-color: transparent;
-  color: #bababa;
   margin: 0 0.25rem;
   border: none;
   font-seize: 0.75rem;
   cursor: pointer;
+  color: ${(props) => (props.isHovering ? "#5c5c5c" : "#bababa")};
 
   $:focus {
     outline: none;
@@ -64,6 +64,7 @@ const ActionBtn = styled.button`
 
   span {
     color: #919191;
+    color: ${(props) => (props.isHovering ? "#5c5c5c" : "#bababa")};
   }
 `;
 
@@ -73,8 +74,13 @@ const Body = styled.div`
 `;
 
 const UserComment = () => {
+  const [isHovering, setHovering] = React.useState(false);
+
   return (
-    <Container>
+    <Container
+      onMouseEnter={() => setHovering(!isHovering)}
+      onMouseLeave={() => setHovering(!isHovering)}
+    >
       <ContainerLeft>
         <img src="http://placekitten.com/100/100" alt="user" />
       </ContainerLeft>
@@ -90,12 +96,17 @@ const UserComment = () => {
           prototype bodywork
         </Body>
         <Actions>
-          <ActionBtn style={{ paddingLeft: 0, marginLeft: 0 }}>REPLY</ActionBtn>
-          <ActionBtn>
+          <ActionBtn
+            isHovering={isHovering}
+            style={{ paddingLeft: 0, marginLeft: 0 }}
+          >
+            REPLY
+          </ActionBtn>
+          <ActionBtn isHovering={isHovering}>
             <span>21</span>&nbsp;REPLIES
           </ActionBtn>
-          <ActionBtn>123</ActionBtn>
-          <ActionBtn>0</ActionBtn>
+          <ActionBtn isHovering={isHovering}>123</ActionBtn>
+          <ActionBtn isHovering={isHovering}>0</ActionBtn>
         </Actions>
       </ContainerRight>
     </Container>
