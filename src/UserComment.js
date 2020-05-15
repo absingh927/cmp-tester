@@ -73,7 +73,6 @@ const Body = styled.div`
 `;
 
 const UserComment = (props) => {
-  console.log("usercome", props);
   const [isHovering, setHovering] = React.useState(false);
 
   return (

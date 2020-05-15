@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserComment should render correctly with no props 1`] = `
+<styled.div
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <styled.div>
+    <img
+      alt="user"
+      src="http://placekitten.com/100/100"
+    />
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      Name
+      <styled.div>
+        tester
+      </styled.div>
+      <styled.div>
+        · 
+        20
+         minutes ago
+      </styled.div>
+    </styled.div>
+    <styled.div>
+      sample small component
+    </styled.div>
+    <styled.div>
+      <styled.button
+        isHovering={false}
+        style={
+          Object {
+            "marginLeft": 0,
+            "paddingLeft": 0,
+          }
+        }
+      >
+        REPLY
+      </styled.button>
+      <styled.button
+        isHovering={false}
+      >
+        <span>
+          10
+        </span>
+         REPLIES
+      </styled.button>
+      <styled.button
+        isHovering={false}
+      >
+        <i
+          className="fas fa-chevron-up"
+        />
+         
+        100
+      </styled.button>
+      <styled.button
+        isHovering={false}
+      >
+        <i
+          className="fas fa-chevron-down"
+        />
+         
+        50
+      </styled.button>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`UserComment should render correctly with props 1`] = `
+<styled.div
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <styled.div>
+    <img
+      alt="user"
+      src="http://placekitten.com/100/100"
+    />
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      Name
+      <styled.div>
+        tester
+      </styled.div>
+      <styled.div>
+        · 
+        20
+         minutes ago
+      </styled.div>
+    </styled.div>
+    <styled.div>
+      sample small component
+    </styled.div>
+    <styled.div>
+      <styled.button
+        isHovering={false}
+        style={
+          Object {
+            "marginLeft": 0,
+            "paddingLeft": 0,
+          }
+        }
+      >
+        REPLY
+      </styled.button>
+      <styled.button
+        isHovering={false}
+      >
+        <span>
+          10
+        </span>
+         REPLIES
+      </styled.button>
+      <styled.button
+        isHovering={false}
+      >
+        <i
+          className="fas fa-chevron-up"
+        />
+         
+        100
+      </styled.button>
+      <styled.button
+        isHovering={false}
+      >
+        <i
+          className="fas fa-chevron-down"
+        />
+         
+        50
+      </styled.button>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
