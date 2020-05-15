@@ -4,7 +4,7 @@ import { shallow } from "enzyme";
 import UserComment from "./UserComment";
 
 describe("UserComment", () => {
-  it("should render correctly with props", () => {
+  it("should render correctly with sample data", () => {
     const sampleData = {
       name: "Name",
       role: "tester",
@@ -15,7 +15,6 @@ describe("UserComment", () => {
       downVote: 50,
     };
 
-    const component = shallow(<UserComment data={sampleData} />);
-    expect(component).toMatchSnapshot();
+    const cmp = shallow(<UserComment data={sampleData} />);
+    expect(cmp).toMatchSnapshot();
   });
-});
