@@ -1,4 +1,4 @@
-Simple Reddit Style Component
+## Simple Reddit Style Component
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
